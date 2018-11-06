@@ -13,22 +13,22 @@ https://docs.docker.com/v17.09/docker-for-windows/install/
 
 # Enter Terminal
 Use terminal to enter following commands:
-  1. sudo docker ps -a
+  `sudo docker ps -a`
   - Works like task manager - see processes/services.
   - Make sure no service is running.
   - If other prisma services are running: sudo docker stop -f <container-name>
 
-  2. sudo docker-compose up -d
+  `sudo docker-compose up -d`
   - For more info: https://docs.docker.com/compose/overview/
   - This is used to start docker & start the containers specified in the `docker-compose.yml` file.
   - docker-compose file currently contains 2 images:
     - mysql service
     - prisma-graphql service
 
-  3. prisma deploy
+  `prisma deploy`
   - Used to deploy the prisma graphql API
 
-  4. prisma generate
+  `prisma generate`
   - Auto generated library connecting to Prisma API.
 
-For more information see https://docs.docker.com/compose/overview/ to bootstrap a prisma service (graphql API) using docker-compose and a fresh MySQL database.
+For more information see https://www.prisma.io/docs/get-started/01-setting-up-prisma-new-database-a002/ to bootstrap a prisma service (graphql API) using docker-compose and a fresh MySQL database.
