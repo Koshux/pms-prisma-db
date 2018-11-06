@@ -13,6 +13,7 @@ https://docs.docker.com/v17.09/docker-for-windows/install/
 
 # Enter Terminal
 Use terminal to enter following commands:
+
   `sudo docker ps -a`
   - Works like task manager - see processes/services.
   - Make sure no service is running.
