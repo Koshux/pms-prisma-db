@@ -3,7 +3,8 @@
 Parking Management System which is configurable for any office which has parking to offer their employees.  This could also extend to other parking spaces offered in public/private properties.
 
 How to make this work:
-NOTE: The phases `deploy` and `generate` have already been completed but are included in the docs purely for additional guidance.
+
+NOTE: The phases `prisma deploy` and `prisma generate` have already been completed but are included in the docs purely for additional guidance.
 
 # Install Prisma
 npm install -g prisma
