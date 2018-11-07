@@ -4,4 +4,8 @@ secret: mysecret123
 
 generate:
   - generator: javascript-client
-    output: ./generated/prisma-client/
+    output: ../generated/prisma-client/
+
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
