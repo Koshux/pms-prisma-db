@@ -6,13 +6,13 @@ How to make this work:
 
 NOTE: The phases `prisma deploy` and `prisma generate` have already been completed but are included in the docs purely for additional guidance.
 
-# Install Prisma
+## Install Prisma
 npm install -g prisma
 
-# Install Docker
+## Install Docker
 https://docs.docker.com/v17.09/docker-for-windows/install/
 
-# Enter Terminal
+## Enter Terminal
 Use terminal to enter following commands:
 
   `sudo docker ps -a`
@@ -33,4 +33,5 @@ Use terminal to enter following commands:
   `prisma generate`
   - Auto generated library connecting to Prisma API.
 
+## Guide
 For more information see https://www.prisma.io/docs/get-started/01-setting-up-prisma-new-database-a002/ to bootstrap a prisma service (graphql API) using docker-compose and a fresh MySQL database.
