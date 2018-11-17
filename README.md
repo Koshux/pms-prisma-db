@@ -35,6 +35,7 @@ Use terminal to enter following commands:
 
 ### Playground
 In order to use both APIs, we need to open up two terminals:
+
   `node src/index.js`
   Used to start the nodejs server running the prisma client
 
