@@ -1,42 +1,12 @@
 const { GraphQLServer } = require('graphql-yoga')
 const { Prisma } = require('prisma-binding')
 
-const resolvers  = {
-  Query: {
-    info: () => `This is the API of a Hackernews Clone`
-  },
-  Mutation: {
-    post: (root, args, context, info) => {
-      return context.db.mutation.createLink({
-        data: {
-          url: args.url,
-          description: args.description
-        }
-      }, info)
-    },
-    updateLink: (root, args) => {
-      console.log('args:', args)
-      const linkPosition = links.map(link => link.id).indexOf(args.id)
+const Query = require('./resolvers/Query')
+const Mutation = require('./resolvers/Mutation')
+const AuthPayload = require('./resolvers/AuthPayload')
+const Subscription = require('./resolvers/Subscription')
 
-      if (linkPosition === -1) return
-
-      const link = links[linkPosition]
-      link.description = args.description
-      link.url = args.url
-
-      return link
-    },
-    deleteLink: (root, args) => {
-      const linkPosition = links.map(link => link.id).indexOf(args.id)
-
-      if (linkPosition === -1) return
-
-      links.splice(linkPosition, 1)
-
-      return links
-    }
-  }
-}
+const resolvers  = { Query, Mutation, AuthPayload, Subscription }
 
 const server = new GraphQLServer({
   typeDefs: './src/schema.graphql',
@@ -45,7 +15,7 @@ const server = new GraphQLServer({
     ...req,
     db: new Prisma({
       typeDefs: 'src/generated/prisma.graphql',
-      endpoint: 'http://localhost:8080',
+      endpoint: 'http://localhost:8800',
       secret: 'mysecret123',
       debug: true
     })
