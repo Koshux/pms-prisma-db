@@ -37,10 +37,13 @@ Use terminal to enter following commands:
 In order to use both APIs, we need to open up two terminals:
 
   `node src/index.js`
+
   Used to start the nodejs server running the prisma client
 
   `graphql playground`
+
   Starts up the graphiQL playground providing you a workspace which hosts all configured layers.  In this guide we have two layers: application and database.
+
   Once started, it will open a tab in your browser at
   http://localhost:3000/playground.  You may now test the API.
 
