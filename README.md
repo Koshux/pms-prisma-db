@@ -33,15 +33,5 @@ Use terminal to enter following commands:
   `prisma generate`
   - Auto generated library connecting to Prisma API.
 
-### Playground
-In order to use both APIs, we need to open up two terminals:
-  `node src/index.js`
-  Used to start the nodejs server running the prisma client
-
-  `graphql playground`
-  Starts up the graphiQL playground providing you a workspace which hosts all configured layers.  In this guide we have two layers: application and database.
-  Once started, it will open a tab in your browser at
-  http://localhost:3000/playground.  You may now test the API.
-
 ## Guide
 For more information see https://www.prisma.io/docs/get-started/01-setting-up-prisma-new-database-a002/ to bootstrap a prisma service (graphql API) using docker-compose and a fresh MySQL database.
